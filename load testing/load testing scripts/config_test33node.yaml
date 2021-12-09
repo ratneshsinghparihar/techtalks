@@ -1,0 +1,18 @@
+version: 1
+config:
+  target: "http://localhost:3001"
+  phases:
+    - duration: 30
+      arrivalRate: 50
+      maxVusers: 50
+  defaults:
+        headers:
+            authorization: token 5188dce15dba9cfa95199872cbf4d6995ef15b67
+scenarios:
+  - flow:
+      - patch:
+          url: "/notes/1"
+          json:
+            title: "test1"
+            description: "first"
+      
